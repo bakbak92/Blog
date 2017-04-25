@@ -1,0 +1,31 @@
+/* CODE COULEUR */
+header {
+  margin-bottom: 60px; }
+  header .nav-menu {
+    background-color: rgba(0, 0, 0, 0.6); }
+    header .nav-menu a {
+      color: white; }
+    header .nav-menu .btn-menu {
+      border-color: white; }
+      header .nav-menu .btn-menu .bar-icon {
+        background-color: white; }
+
+.article .img {
+  text-align: center; }
+  .article .img img {
+    width: 300px; }
+.article h3 {
+  text-align: center; }
+.article form {
+  text-align: center; }
+  .article form textarea {
+    width: 300px; }
+.article .date_post {
+  font-size: 12px;
+  text-align: right; }
+
+footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white; }
+
+/*# sourceMappingURL=style.css.map */
