@@ -1,5 +1,21 @@
 <?php
 require 'header.php';
+if (isset($_POST['pseudo']) && isset($_POST['password'])) {
+  $pseudo = htmlspecialchars($_POST['pseudo']);
+  $password = htmlspecialchars($_POST['password']);
+  $req = $bdd->prepare('SELECT id FROM users WHERE pseudo = :pseudo AND password = :password');
+  $req->execute(array(
+    'pseudo' => $pseudo,
+    'password' => $password
+  ));
+  $donnees = $req->fetch();
+  if ($donnees) {
+    echo "tu n'es pas connectée";
+  }
+  else {
+    
+  }
+}
  ?>
  <form class="form-horizontal" method="post" action="connexion_post.php">
   <div class="form-group">

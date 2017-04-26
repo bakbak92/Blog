@@ -1,8 +1,39 @@
 <?php
 require 'header.php';
 ?>
+<?php
+$dispo = 0;
+if (isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['password'])) {
+  $pseudo = htmlspecialchars($_POST['pseudo']);
+  $email = htmlspecialchars($_POST['email']);
+  $password = htmlspecialchars($_POST['password']);
+  $req = $bdd->prepare('SELECT id FROM users WHERE pseudo = :pseudo AND email = :email');
+  $req->execute(array(
+    'pseudo' => $pseudo,
+    'email' => $email
+  ));
+  $donnees = $req->fetch();
+
+  if ($donnees) {
+    echo "ce pseudo ou email est déja pris";
+  }
+  else {
+    $dispo +=1;
+  }
+  $req->closeCursor();
+}
+if ($dispo==1) {
+  $req = $bdd->prepare('INSERT INTO users(pseudo, email, password) VALUES(:pseudo, :email, :password)');
+  $req->execute(array(
+    'pseudo' => $pseudo,
+    'email' => $email,
+    'password' => $password
+  ));
+  echo "Tu es bien inscris";
+}
+ ?>
 <div class="container">
-  <form action="inscription_post.php" method="post">
+  <form action="inscription.php" method="post">
     <div class="form-group">
       <label for="">Pseudo </label>
       <input type="text" name="pseudo" placeholder="Pseudo"value="">
