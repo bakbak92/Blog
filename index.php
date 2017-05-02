@@ -15,15 +15,19 @@ $req->bindValue('limite', $limite, PDO::PARAM_INT);
 $req->execute();
 
 ?>
+<div class="container header">
+
+</div>
 <div class="container">
   <div class="row">
     <?php
     while ($billets = $req->fetch()) {
       ?>
       <div class="col-lg-6 col-md-6 article">
-        <h3> <?php echo $billets['titre'] ?> </h3><p class="date_post"><?php echo "Post : le ". $billets['jour']. " - 0". $billets['mois']. " - ". $billets['année'] ?><p>
-          <p class="img"><img src="img/<?php echo $billets['id'] ?>.jpg" alt=""></p>
-        <p><a href="commentaires.php?billet=<?php echo $billets['id'] ?>&page=1">Voir Article</a></p>
+          <h3> <?php echo $billets['titre'] ?> </h3><p class="date_post"><?php echo "Post : le ". $billets['jour']. " - 0". $billets['mois']. " - ". $billets['année'] ?><p>
+            <p class="img"><img src="img/<?php echo $billets['id'] ?>.jpg" alt=""></p>
+          <p><a href="commentaires.php?billet=<?php echo $billets['id'] ?>&page=1">Voir Article</a></p>
+
       </div>
       <?php
     }

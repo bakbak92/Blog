@@ -15,9 +15,14 @@ $vert : #29dfb6;
 $vert2 : #0ee684;
 $violet4: #bc24ab;
 $vert3 : #1dec8c;
+$grey: #3E3E3E;
+$grey1: #CBCBCF;
 //
 
 header {
+  background-image: url(../img/background-img.jpeg);
+  height: 400px;
+  background-size: cover;
   margin-bottom: 60px;
   .nav-menu {
     background-color: rgba(0, 0, 0, 0.6);
@@ -31,30 +36,49 @@ header {
       }
     }
   }
+  h1 {
+    color: $white;
+    padding-top: 100px;
+    text-align: center;
+    margin: 0;
+  }
 }
 .article {
-  .img {
-    text-align: center;
-    img {
+    .img {
+      text-align: center;
       width: 300px;
+      background-color: $violet;
+      height: 200px;
+      img {
+        width: 300px;
+        height: 200px
+      }
+    }
+    h3 {
+      text-align: center;
+    }
+    form {
+      text-align: center;
+      textarea {
+        width: 300px;
+      }
+    }
+    .date_post {
+      font-size: 12px;
+      text-align: left;
     }
   }
-  h3 {
-    text-align: center;
-  }
-  form {
-    text-align: center;
-    textarea {
-      width: 300px;
-    }
-  }
-  .date_post {
-    font-size: 12px;
-    text-align: right;
-  }
-}
 
 footer {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: $vert;
   color: $white;
+  padding-top: 30px;
+  ul {
+    display: flex;
+    li {
+      list-style: none;
+      padding-left: 30px;
+      padding-bottom: 30px;
+    }
+  }
 }

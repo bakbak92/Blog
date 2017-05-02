@@ -4,7 +4,7 @@ require 'header.php';
 
   <div class="" style="text-align:center">
     <h1>Bienvenue sur ton back office</h1>
-    <h3>Tu pourra ajouter des billets ou bien les modifier ou les supprimer</h3>
+    <h3>Tu pourras ajouter des billets ou bien les modifier ou les supprimer</h3>
     <form class="" action="ajouter.php" method="post">
       <p>Ajouter un billet</p>
       <p>Titre billet <input type="text" name="titre" value=""></p>

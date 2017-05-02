@@ -9,15 +9,18 @@ if (isset($_POST['pseudo']) && isset($_POST['password'])) {
     'password' => $password
   ));
   $donnees = $req->fetch();
-  if ($donnees) {
+  if (!$donnees) {
     echo "tu n'es pas connectée";
   }
   else {
-    
+    session_start();
+    $_SESSION['id'] = $données['id'];
+    $_SESSION['pseudo'] = $pseudo;
+    echo "tu es connecté ".$_SESSION['pseudo'];
   }
 }
  ?>
- <form class="form-horizontal" method="post" action="connexion_post.php">
+ <form class="form-horizontal" method="post" action="connexion.php">
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Pseudo</label>
     <div class="col-sm-10">

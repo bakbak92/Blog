@@ -1,5 +1,8 @@
 /* CODE COULEUR */
 header {
+  background-image: url(../img/background-img.jpeg);
+  height: 400px;
+  background-size: cover;
   margin-bottom: 60px; }
   header .nav-menu {
     background-color: rgba(0, 0, 0, 0.6); }
@@ -9,11 +12,20 @@ header {
       border-color: white; }
       header .nav-menu .btn-menu .bar-icon {
         background-color: white; }
+  header h1 {
+    color: white;
+    padding-top: 100px;
+    text-align: center;
+    margin: 0; }
 
 .article .img {
-  text-align: center; }
+  text-align: center;
+  width: 300px;
+  background-color: #5c0393;
+  height: 200px; }
   .article .img img {
-    width: 300px; }
+    width: 300px;
+    height: 200px; }
 .article h3 {
   text-align: center; }
 .article form {
@@ -22,10 +34,17 @@ header {
     width: 300px; }
 .article .date_post {
   font-size: 12px;
-  text-align: right; }
+  text-align: left; }
 
 footer {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white; }
+  background-color: #29dfb6;
+  color: white;
+  padding-top: 30px; }
+  footer ul {
+    display: flex; }
+    footer ul li {
+      list-style: none;
+      padding-left: 30px;
+      padding-bottom: 30px; }
 
 /*# sourceMappingURL=style.css.map */

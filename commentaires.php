@@ -13,9 +13,11 @@ $req->execute(array($id_billet));
   $billets = $req->fetch();
   ?>
   <div class="col-lg-offset-2 col-lg-8 article">
-    <h3> <?php echo $billets['titre'] ?> </h3><p class="date_post"><?php echo "Post : le ". $billets['jour']. " - 0". $billets['mois']. " - ". $billets['année'] ?><p>
-      <p class="img"><img src="img/<?php echo $billets['id'] ?>.jpg" alt=""></p>
-    <p><?php echo $billets['contenu'] ?> <a href="commentaires.php?billet=<?php echo $billets['id'] ?>&page=1">Commentaires</a></p>
+      <h3> <?php echo $billets['titre'] ?> </h3><p class="date_post"><?php echo "Post : le ". $billets['jour']. " - 0". $billets['mois']. " - ". $billets['année'] ?><p>
+        <p class="img"><img src="img/<?php echo $billets['id'] ?>.jpg" alt=""></p>
+      <p><?php echo $billets['contenu'] ?> <a href="commentaires.php?billet=<?php echo $billets['id'] ?>&page=1">Commentaires</a></p>
+
+    </div>
 
   <?php
   $req->closeCursor();
